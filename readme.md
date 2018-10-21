@@ -1,5 +1,7 @@
+![logo](https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png)
 
-
-Full Stack (MERN) Bootcamp
-Oct 2018 - Jan 2019
-Salt Lake City, UT
+</br>V School
+</br>[[VSchool.io | alt=V School]]
+</br>Full Stack (MERN) Bootcamp
+</br>Oct 2018 - Jan 2019
+</br>Salt Lake City, UT
