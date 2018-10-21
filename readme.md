@@ -1,4 +1,4 @@
-![logo](https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png =50px)
+![logo](https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png =50x)
 
 </br>V School
 [https://VSchool.io]
