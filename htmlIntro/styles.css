@@ -1,0 +1,55 @@
+
+#container h1 {
+    color: DarkGreen;
+}
+.class1 {
+    text-align: center; 
+    font-family: Georgia;
+}
+p {
+    line-height: 25px;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#upper {
+    text-transform: uppercase;
+}
+
+
+
+
+/* 
+classes
+    in html:
+        <h1 class="className">title</h1>
+    in css:
+        .className {
+            color: blue;
+        }
+
+IDs
+in html:
+    <h1 id="IdName">title</h1>
+    in css:
+    #IdName {
+        color: blue;
+    }
+
+traverse - select only one element withn a class or ID
+    in html:
+    <div>
+        <h1>title</h1>
+        <p>paragraph</p>
+    in css:
+        .container h1 {
+            color: blue;
+        }
+        .container p {
+            color: green;
+        }
+
+    */

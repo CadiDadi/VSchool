@@ -1,0 +1,1 @@
+document.getElementById("jokes").innerHTML = "Hello World!";
