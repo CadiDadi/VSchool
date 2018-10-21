@@ -1,5 +1,5 @@
-![logo](https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png =50x)
-![](https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png =50x)
+
+<img src="https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png" alt="V School" width="200"/>
 </br>V School
 [https://VSchool.io]
 </br>Full Stack (MERN) Bootcamp
