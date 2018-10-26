@@ -77,17 +77,37 @@ convert()
 // }
 
 
-var array = [1,2,3,4,5]
-var string = 'hello'
-console.log(array[2])
-console.log(string[1])
+// var array = [1,2,3,4,5]
+// var string = 'hello'
+// console.log(array[2])
+// console.log(string[1])
 
-var object1 = {
-    name: 'amy',
-    age: 7
-}
+// var object1 = {
+//     name: 'amy',
+//     age: 7
+// }
+
 //these return the same thing - may be used in different situations
-console.log(object1.age)
-console.log(object1['age'])
+// console.log(object1.age)
+// console.log(object1['age'])
 
+// Write a function using the .splice() and .split() methods to remove the name Albert from the following string and replace it with your own.
+function a(){
+var str = "Hello my name is Albert"
+var newStr = str.split(' ')
+newStr.splice(4 ,1, 'Scott')
+console.log(newStr.join(' '))
+}
+
+/////  WHILE loop vs FOR loop  /////
+// WHILE loop 
+var totalWhile = 0
+ while(totalWhile < 3){
+     totalWhile++
+     console.log(totalWhile)
+ }
+ // FOR loop
+ for(var totalFor = 0; totalFor < 3; totalFor++){
+     console.log(totalFor)
+ }
 

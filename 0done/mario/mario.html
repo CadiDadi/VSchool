@@ -9,30 +9,57 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
-<body>
-    
-    <div id="header">Header</div>
-
-    <div>
-
-        
-    </div>
-
-
+<body>    
+    <div id="header">Mario Pest Control</div>
+    <br><br><br>
+    <form name='marioForm'>
+        <div class="goomba">
+            <img src='images/goomba.jpeg'/> 
+            <h2>Goomba</h2>
+            <p>Earn: 5 Points</p>
+            Enter number of baddies captured: 
+            <input type="number" name="goombaTotal" placeholder="Baddies captured">
+        </div>
+        <br><br><br>
+        <div class="bobombs">
+            <img src='images/bobomb.jpeg'/> 
+            <h2>Bob-ombs</h2>
+            <p>Earn: 7 Points</p>
+            Enter number of baddies captured: 
+            <input type="number" name="bobombTotal" placeholder="Baddies captured">
+        </div>
+        <br>
+        <div class="cheep">
+                <img src='images/cheep.jpeg'/> 
+                <h2>Cheep-cheeps</h2>
+                <p>Earn: 11 Points</p>
+                Enter number of baddies captured: 
+                <input type="number" name="cheepsTotal" placeholder="Baddies captured">
+        </div>
+        <div class="total">
+            <h3>Total Babbies Captured: </h3>
+            <h3 id="baddiesCaptured" placeholder="# Baddies captured"></h3>
+            <h3>Total Babbie Points Earned: </h3>
+            <h3 id="pointsTotal" placeholder="Total Points"></h3>
+            <br><br><br><br>
+            <button id="calculate">Calculate Total</button>
+        </div>
+    </form>
 
     <div id="footer">
         <h4>Contact Me:</h4>
-        <p>     Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mario@mario.mario
+        <p>
+            Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mario@mario.mario
             <br>Website: &nbsp;&nbsp;mario.io
             <br>Address: &nbsp;&nbsp;7 Mario St, Mario, MA 21703
-
-        </p>
-        
+        </p> 
+        <!-- <p style="position: absolute; top: 0px; width: 100%; text-align: left">Email: mario@mario.mario</p>
+        <p style="position: absolute; top: 0px; width: 100%; text-align: center">Website: mario.io</p>
+        <p style="position: absolute; top: 0px; width: 100%; text-align: right; padding: 5px">Address: 7 Mario St</p> -->
         
     </div>
 
-
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
