@@ -1,0 +1,40 @@
+/* MARIO css file */
+
+/* use flex-box? */
+
+/* need this to make container also be able to equal 100%
+html, body {
+    height: 100%;
+}
+.container {
+    height: 100%;
+} */
+
+/* In order to use percentage widths and not have them wrap, you'll need to add the following line to the top of your CSS: */ 
+/* * {
+    box-sizing: border-box; 
+    font-size: 0px;
+} */
+
+#header {
+    height: 50px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: blue;
+    top: 0;
+    left: 0;
+    position: ABSOLUTE;
+}
+#footer {
+    height: 150px;
+    width: 100%;
+    color: white;
+    background-color: blue;
+    bottom: 0;
+    left: 0;
+    position: ABSOLUTE;
+    padding: 10px;
+}
+
+

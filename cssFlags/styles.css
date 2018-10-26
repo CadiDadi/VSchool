@@ -1,0 +1,313 @@
+/* //////notes////////
+
+https://coursework.vschool.io/css-layout-and-positioning/
+
+% vs px - % makes it RESPONSIVE
+
+CSS Positioning
+
+CSS positioning is involved, but take the time to memorize and understand these challenging principles early and it will make your font end developing life a whole lot more pleasant.
+
+The four positions we will talk about now are:
+
+static
+relative
+fixed
+absolute
+
+In CSS, we would make an element a certain position like:
+
+div {
+  position: relative;
+}
+Or whatever position we need.
+
+Static
+Static is the default. Elements are positioned according to the normal flow of the page.
+
+Relative
+Elements are positioned relative to their normal position.
+
+This means we can give them top, bottom, left and right properties. We could not have done that to a static element.
+
+This pushes the element away from the top, bottom, left or right.
+
+div {
+    position: relative;
+    top: 60px;
+}
+This would push or div down (away from the top) 60px.
+
+Make sure you have these two positions memorized, and understand them before moving on.
+
+So, just regular position: relative does change where it's going to sit, but once we say: right: 10px it's going to move ten pixels from the right of where it would be if positioned statically.
+
+Fixed
+Fixed elements stay on the viewport (screen or window) where you put them no matter where you scroll.
+
+Bottom, top, left and right are used to position them.
+
+You can stick a footer permanently to the bottom of the page, even if you scroll, like this:
+
+.footer-content {
+    position: fixed;
+    bottom: 0;
+}
+
+Absolute
+These elements should be nested somewhere in a positioned element.
+
+They look for their nearest positioned ancestor and can use top, bottom, left and right to be positioned exactly inside that positioned ancestor.
+
+Positioned and not Positioned
+Every element with the position static is considered "not positioned." Every element with the positions fixed, relative, or absolute are considered "positioned." This is important for position Absolute.
+
+Tutorials and Practice
+Here are some useful tutorials to being able to understand these positions. It's important to practice using these. You can't avoid positioning.
+
+http://www.barelyfitz.com/screencast/html-training/css/positioning/
+http://learnlayout.com/position.html
+
+
+width - why 98% (not 100%)? to compensate for margin, which takes 1% from left&right (and top&bottom) => width 98% + margin-left 1% + margin-right 1% = 100%
+
+*/
+
+/* 1 large container div to hold many divs */
+#flex-container {
+    margin: 5%
+}
+
+/* sweden */
+#sweden-container {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    margin: 330px 0px;
+}
+    .sweden-blue {
+        background-color: blue;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 0;   
+    }
+    .sweden-yellow1 {
+        background-color: yellow;
+        display: inline-block;
+        position: relative;
+        width: 30%;
+        height: 102%;
+        top: -104%;
+        left: 30%;
+        /* bottom: 2450px;    */
+
+    }
+    .sweden-yellow2 {
+        background-color: green;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 30%;
+        bottom: 344px;   
+        /* top: -52%; */
+        /* left: 15%;  */
+    }
+/* france */
+#french-container {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+}
+    .f-blue {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        background-color: blue;
+        left: 0;   
+    }
+    .f-white {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        background-color: white;
+        right: 100px;    
+    }
+    .f-red {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        background-color: red;
+        right: 0;   
+    }
+
+/* germany */
+#germany-container {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+}
+    .g-black {
+        position: relative;
+        width: 100%;
+        height: 33%;
+        background-color: black;
+        /* top: 0;    */
+    }
+    .g-red {
+        position: relative;
+        width: 100%;
+        height: 33%;
+        background-color: red;
+        /* bottom: 100px;    */
+    }
+    .g-yellow {
+        position: relative;
+        width: 100%;
+        height: 33%;
+        background-color: yellow;
+        /* bottom: 0;    */
+    }
+
+/* madagascar */
+#madagascar-container {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+}
+    .m-white {
+        position: relative;
+        width: 30%;
+        height: 200px;
+        /* background-color: white; */
+        display: inline-block;
+        left: 0;   
+    }
+    .m-red {
+        background-color: red;
+        display: inline-block;
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        left: 30%;
+    }
+    .m-green {
+        position: relative;
+        width: 70%;
+        height: 50%;
+        background-color: green;
+        bottom: 0;   
+        display: inline-block;
+        top: -52%;
+        left: 30%;
+    }
+
+/* switzerland */
+#switzerland-container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    position: absolute;
+    /* margin: 200px 0px; */
+}
+    .s-red {
+        background-color: red;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 0;   
+    }
+    .s-white1 {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 30%;
+        height: 70%;
+        /* top: -70%; */
+        left: 30%;
+        bottom: 250px;   
+
+    }
+    .s-white2 {
+        background-color: green;
+        display: inline-block;
+        position: relative;
+        width: 70%;
+        height: 30%;
+        bottom: 410px;   
+        /* top: -52%; */
+        left: 15%; 
+    }
+
+
+
+
+
+/*  
+.div2 {
+    width: 80%;
+    background-color: lightgray;
+    text-align: center;
+    position: center;
+    margin: 5px;
+    padding: 0px;
+}
+    .div3 {
+        height: 300px;
+        background-color: blue;
+        position: center;
+        margin: 5px -4px;
+        width: 33%;
+        display: inline-block;
+    }
+    .div4 {
+        height: 300px;
+        background-color: white;
+        position: center;
+        margin: 5px -4px;
+        width: 33%;
+        display: inline-block;
+    }
+    .div5 {
+        height: 300px;
+        background-color: red;
+        position: center;
+        margin: 5px -4px;
+        width: 33%;
+        display: inline-block;
+    }
+.div6 {
+    width: 80%;
+    background-color: lightgray;
+    text-align: center;
+    position: center;
+    margin: 5px;
+    padding: 1px;
+}
+    .div7 {
+        height: 100px;
+        background-color: black;
+        margin: 0px 10px 0px 10px;
+        width: 97%;
+    }
+    .div8 {
+        height: 100px;
+        background-color: red;
+        position: center;
+        margin: 0px 10px 0px 10px;
+        width: 97%;
+    }
+    .div9 {
+        height: 100px;
+        background-color: yellow;
+        position: center;
+        margin: 0px 10px 40px 10px;
+        width: 97%;
+    }
+*/

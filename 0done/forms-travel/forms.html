@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="styles.css" /> -->
+</head>
+
+<body>
+
+    <!-- FORMS -->
+
+    <!-- HOW MAKE REQUIRE 1 ENTRY IN EACH? -->
+        
+        <br>
+        <form name='userInfo'>
+            <input type="text" placeholder="First Name" name="firstName" required>
+            <input type="text" placeholder="Last Name" name="lastName">
+            <input type="text" placeholder="Age" name="age"> 
+        <br>    
+        <div name="gender">
+            <br>
+            <input type="radio" name="genderType" value="male">Male
+            <input type="radio" name="genderType" value="female">Female
+        </div>
+        <br>
+        <div name='location' required>
+                <input type="checkbox" value="slc"   name="loco">SLC 
+                <input type="checkbox" value="nyc"  name="loco">NYC 
+                <input type="checkbox" value="dc" name="loco">DC  
+        </div>
+        <br>
+        <div name='diet'>
+                <input type="checkbox" placeholder="vegetarian" name="vegetarian">Vegetarian
+                <input type="checkbox" placeholder="kosher" name=kosher">Kosher
+                <input type="checkbox" placeholder="lactose" name="lactose">Lactose      
+        </div>
+        <br>    
+        <button>Submit</button>
+        </form>
+        <!-- <input type="number" step="10">
+        <input type="color">
+        <input type="date"> -->
+
+       <!-- Emmet - shortcut then  TAB
+            ul>li*5  
+            h1.class
+            p#ID -->
+    <script src="app.js"></script>
+</body>
+</html>
+
+
