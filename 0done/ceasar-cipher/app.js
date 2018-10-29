@@ -1,9 +1,12 @@
+// Readline:
+// -sync is node/npm install that allows interaction in the Console, see vars - input & shift
+// - requires: 1. npm init & npm i readline-sync commands. 2. this line in js file: var readline = require('readline-sync');
+
 var readline = require('readline-sync');
 var input = readline.question('What phrase would you like to encrypt? ').toLowerCase();
 var shift = parseInt(readline.question('How many letters would you like to shift? '));
 
-
-function ceaserCipher(input, shift){    
+function ceasarCipher(input, shift){    
     var alphabet = "abcdefghijklmnopqrstuvwxyz"
     var result = ""
     // Loop
@@ -20,9 +23,7 @@ function ceaserCipher(input, shift){
     }
     return result
 }
-
-
-console.log(ceaserCipher(input, shift))
+console.log(ceasarCipher(input, shift))
 
 // 1. Make sure you understand the question
 // 2. Make a plan
@@ -30,5 +31,5 @@ console.log(ceaserCipher(input, shift))
     // Break problem down into pieces
 // 3. Start with the first problem, and go from there.
     // Back to step 1 if it breaks
-// 4. Revsiew, look back, refactor
+// 4. Review, look back, refactor
 

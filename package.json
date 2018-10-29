@@ -1,0 +1,23 @@
+{
+  "name": "vschool",
+  "version": "1.0.0",
+  "description": "<img src=\"https://vschool.io/wp-content/uploads/2018/04/VSPrism_OuterSpace.png\" alt=\"V School\" width=\"200\"/> </br>V School </br>https://VSchool.io </br>Full Stack (MERN) Bootcamp </br>Oct 2018 - Jan 2019 </br>Salt Lake City, UT",
+  "main": "forceptionNestLoops.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CadiDadi/assignments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CadiDadi/assignments/issues"
+  },
+  "homepage": "https://github.com/CadiDadi/assignments#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}

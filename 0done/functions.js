@@ -156,7 +156,9 @@ console.log(makeSandwich())
 // Optional Challenge
 
     // o1 Write a function that accepts a number ‘n’ as a parameter. Then print the first ‘n’ Fibonacci numbers and return their sum.
-
+        function fibonacci(n){
+            
+        }
     // o2 Write a function to solve the quadratic equation. (It should accept three numbers as parameters, and then return an array with the resulting x values.)
 
     // o3 Write a function that accepts a string as a parameter. Return the most frequently occuring letter in that string.
