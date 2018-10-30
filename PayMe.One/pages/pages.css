@@ -1,0 +1,172 @@
+/*-------------
+  account page
+-------------*/
+#account{
+    height: 500px;
+    width: 800px;
+}
+#accountPage{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    position: relative;
+    background-color: rgb(88, 84, 84);
+    min-height: 1000px;
+    margin-bottom: 500px;
+    clear: both;
+}
+header {
+    height: 50px;
+    width: 100%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(57, 57, 141);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url("../images/paymeSilver.jpg")
+}
+nav > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: blue;
+}  
+.navImages{
+    height: 60px;
+    width: 60px;
+}
+#wallet{
+    height: 65px;
+    width: 90px;
+}
+#giftcard{
+    height: 60px;
+    width: 90px;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: blue;
+}  
+#titleText{
+    vertical-align: middle;
+    margin-top: 40px;
+}
+#logo{
+    height: 300px;
+    width: 300px;
+}
+footer {
+    height: 150px;
+    width: 100%;
+    color: blue;
+    background-image: url("../images/paymeSilver.jpg");
+    bottom: 0;
+    left: 0;
+    right:0;
+    position: fixed;
+    padding: 10px;
+    overflow: hidden;
+}
+details{
+    background-color: grey;
+}
+summary{
+    background: white;
+    color: blue;
+    padding: 3px;
+}
+a{
+    text-decoration: none;
+}
+
+/*-------------
+  egifts page
+-------------*/
+
+.moon {
+    border: 1px solid;
+    background-color: white;
+    color: blue;
+    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+    top: 30px;
+}
+.lambos {
+    border: 1px solid;
+    background-color: white;
+    color: blue;
+    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+}
+.holiday {
+    border: 1px solid;
+    background-color: white;
+    color: blue;
+    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+}
+.total {
+    border: 1px solid;
+    background-color: white;
+    color: blue;
+    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+}
+h3{
+    font-size: 28px;
+}
+#cardssCaptured,
+#cardsTotal {
+    background-color: white;
+    color: blue;
+    border: 2px blue solid;
+    margin: 0% 40%;
+    min-height: 20px;
+    min-width: 150px;
+    max-width: 151px;;
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 100px;
+    width: 300px;
+}
+button{
+    height: 40px;
+    width: 150px;
+    font-size: 14px;
+    font-weight: bold; 
+    background-color: blue;
+    color: aliceblue;
+    margin-left: 10px;
+}

@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    position: relative;
+    background-color: rgb(163, 159, 159);
+    /* adjust footer verticle */
+    min-height: 500px;
+    margin-bottom: 500px;
+    clear: both;
+}
+#container {
+    height: 50px;
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    align-items: center;
+    background-color: rgb(57, 57, 141);
+    top: 0;
+    position: fixed;
+}
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url("images/paymeSilver.jpg");
+}
+nav > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: blue; 
+}  
+#wallet{
+    height: 65px;
+    width: 90px;
+}
+#giftcard{
+    height: 60px;
+    width: 90px;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgb(163, 159, 159);
+}
+.title > div {
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: blue;
+}  
+#titleText{
+    vertical-align: middle;
+    margin-top: 40px;
+}
+#logo{
+    height: 300px;
+    width: 300px;
+}
+footer {
+    height: 150px;
+    width: 100%;
+    color: blue;
+    background-image: url("images/paymeSilver.jpg");
+    bottom: 0;
+    left: 0;
+    right:0;
+    position: fixed;
+    padding: 10px;
+    overflow: hidden;
+}
+summary{
+    background: blue;
+    color: white;
+    padding: 3px;
+}
+a{
+    text-decoration: none;
+}
+.div7 {
+    height: 100px;
+    width: 31%;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 40px 0;
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+}
+.div7:hover{
+    background-color: blue;
+    color: white;
+}
+.div8 {
+    height: 100px;
+    width: 98%;
+    background-color: white;
+    color: blue;
+    text-align: center;
+    padding: 40px 0;
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+}
+.div8:hover{
+    background-color: blue;
+    color: white;
+}
+@media (max-width: 768px) {
+    .div6,
+    .div7{
+        width: 100%;
+    }
+}
+
+
+
