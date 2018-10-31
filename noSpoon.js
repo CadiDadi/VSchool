@@ -23,3 +23,13 @@
 // place all of your objects into an array and call your functions.
 // Nest one object within another, within another object, within another.
 // Create and call a method in one object that calls a method nested at the deepest level of your deeply nested object.
+
+var chair = {
+    color: 'black',
+    weight: 5,
+    value: 40,
+    summary: function(){
+        console.log('I am a ' + this.color + this.weight)
+    }
+}
+// console.log(chair)
