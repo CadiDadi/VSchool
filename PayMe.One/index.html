@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="payme.css">
+    <!-- Good Convention to name your first css file 'styles.css' -->
+    <link rel="stylesheet" href="styles.css">
     <title>PayMe.One</title>
     <!-- favicon generator -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -19,6 +20,8 @@
 
 <body>    
     <nav id="container">
+      <!-- No need to write href in all caps -->
+      <!-- For Navbars or Headers it is best practice to write them as ul > li Refer to the following link  https://www.w3schools.com/css/css_navbar.asp -->
         <div>
             <a HREF="pages/account.html">Account</a>       
         </div>               
@@ -38,6 +41,7 @@
             <a HREF="payme.html">Home &nbsp;|</a>       
         </div>               
     </nav>
+    <!-- br is written as a self closing tag so it should look like this <br/> rather than <br> -->
     <br><br>
     <div class="title">
         <div>
@@ -61,6 +65,8 @@
             <h3>Create Wallet</h3>
     </div>
     <footer>
+        <!-- Another possible solution could be to put the Email and Website in one div, and put the Info@PayMe.One and PayMe.One in another div
+        Then you could just put the divs next to eachother and space them out rather than using &nbsp to space them out. -->
         <p>
             Email:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Info@PayMe.One
             <br>
