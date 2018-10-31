@@ -1,4 +1,4 @@
-
+// This is very clean code, it looks fantastic, well done
 
 var giftCards = document.giftForm
 giftCards.addEventListener('submit', function(event){

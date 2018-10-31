@@ -86,6 +86,12 @@ summary{
 a{
     text-decoration: none;
 }
+
+/* 
+Rather than naming the div classes: 'div7, div8, div9 etc...' You should give them names more specific
+to what they actually are for example: div7 could be named 'crypto boxes' or 'crypto buttons' or 'crypto actions' etc...
+ */
+ 
 .div7 {
     height: 100px;
     width: 31%;
