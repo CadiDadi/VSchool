@@ -1,6 +1,4 @@
 
-
-
 // https://coursework.vschool.io/rpg/
 // https://coursework.vschool.io/colossal-adventure-console-rpg/
 
@@ -34,8 +32,8 @@ var readline = require('readline-sync')
 
 ////////// nate's notes ///////////
 
-//////////////////////
-// Players and Enemies Constructors
+///////
+// Players and Enemies Constructors //
 function Player(name, hp){
     this.name = name
     this.hp = hp
@@ -54,8 +52,8 @@ function Enemy(type, hp){
         return Math.floor(Math.random() * (25 - 5) + 5)
     }
 }
-/////////////////////////
 
+////////
 // Global Vars //
 var player1 = new Player("Steve", 100)
 var playerChoiceOptions = ["walk", "other stuff"]
@@ -69,7 +67,7 @@ function walk(){
         // else, the user is taken back to initial question ( or anything else you'd like )
 }
 
-///////////////
+///////
 // Game Loop //
 
 console.log("Greetings Traveller!")
@@ -92,11 +90,11 @@ while(player1.hp > 0){
 }
 
 ////////////////////////////////////////////////////
-// You will have functions with loops inside of themyer
+// You will have functions with loops inside of them
 // Think, Do I need this action repeated?  Put it in a while loop
 function attackSequence(){
     // var currentEnemy = new Enemy("orc", 200)
-    while(player is alive && the enemy is alive){
+    while(player is alive && enemy is alive){
         // player attacks enemy
         // enemy attacks player
     }
@@ -124,16 +122,16 @@ function Enemy(type, hp){
         Math.floor(Math.random() * (50 - 30) + 30)
     }
 }
-var player1 = new Player('Scott', 100)
-console.log(player1)
-var orc = new Enemy('Orc', 30)
+// var player1 = new Player('Scott', 100)
+// console.log(player1)
+// var orc = new Enemy('Orc', 30)
 
-console.log(player1.attack())
-console.log(orc)
+// console.log(player1.attack())
+// console.log(orc)
 
-orc.hp -= player1.attack()
-player1.hp -= orc.attack()
-console.log(orc)
+// orc.hp -= player1.attack()
+// player1.hp -= orc.attack()
+// console.log(orc)
 
 
 
