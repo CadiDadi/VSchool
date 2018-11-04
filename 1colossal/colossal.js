@@ -30,7 +30,7 @@
 
 var readline = require('readline-sync')
 
-////////// nate's notes ///////////
+////////// nate's notes /////////// 
 
 ///////
 // Players and Enemies Constructors //
@@ -47,7 +47,7 @@ function Player(name, hp){
 function Enemy(type, hp){
     this.type = type
     this.hp = hp
-    // attack for a random amount
+    // attack for a random amount hp damage
     this.attack  = function(){
         return Math.floor(Math.random() * (25 - 5) + 5)
     }

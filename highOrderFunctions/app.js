@@ -8,6 +8,8 @@
         // https://coursework.vschool.io/array-filter-exercises/
         // https://coursework.vschool.io/array-reduce-exercises/
         // https://coursework.vschool.io/array-sort-exercises/
+        // https://coursework.vschool.io/letter-frequency/
+
 // extra
         // https://coursework.vschool.io/settimeout-setinterval/
 
@@ -68,19 +70,19 @@
 // Use the built-in .map() method on arrays to solve all of these problems
 
 //////done/////  1) Make an array of numbers that are doubles of the first array
-var arr = [1,2,3,4];
-var newarr = arr.map(function(item){
-    return item + 1;
-})
-console.log(newarr) // returns [ 2, 3, 4, 5 ]
+        // var arr = [1,2,3,4];
+        // var newarr = arr.map(function(item){
+        //     return item + 1;
+        // })
+        // console.log(newarr) // returns [ 2, 3, 4, 5 ]
 
-function doubleNumbers(arr){
-    var returnsTheDoubledNumbers = arr.map(function(item){
-        return item * 2;
-    })
-    console.log(returnsTheDoubledNumbers) // returns [4, 10, 200]
-}
-doubleNumbers([2, 5, 100]); 
+        // function doubleNumbers(arr){
+        //     var returnsTheDoubledNumbers = arr.map(function(item){
+        //         return item * 2;
+        //     })
+        //     console.log(returnsTheDoubledNumbers) // returns [4, 10, 200]
+        // }
+        // doubleNumbers([2, 5, 100]); 
 
 ///////done/////// 2) Take an array of numbers and make them strings
 // function stringItUp(arr){
@@ -186,34 +188,53 @@ namesOnly([
 // https://coursework.vschool.io/array-filter-exercises/
 
 //notes
-    var arr2 = [1, 2, 3, 4, 5, 6]
-    var filteredArray = arr2.filter(function(item){
-                            if(item % 2 === 0){
-                                return item
-                            }
-                        })
-    console.log(filteredArray)  // returns [2, 4, 6]
+    // var arr2 = [1, 2, 3, 4, 5, 6]
+    // var filteredArray = arr2.filter(function(item){
+    //                         if(item % 2 === 0){
+    //                             return item
+    //                         }
+    //                     })
+    // console.log(filteredArray)  // returns [2, 4, 6]
 
     // Use the built-in array method .filter() to solve all of these problems
 
-    // 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+    //done// 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
     
-    function fiveAndGreaterOnly(arr) {
-        
-    }
-    fiveAndGreaterOnly([3, 6, 8, 2]); /// [6, 8]
+    //ex. 1
+        // function BiggerElements(val){
+        //  return function(value, index, array){
+        //  return (value >= val)
+        //     }
+        // }
+        // var result = [11, 45, 4, 31, 3, 99, 64, 10].filter(BiggerElements(10))
+        // console.log(result)
 
-    // 2) Given an array of numbers, return a new array that only includes the even numbers.
-    function abc(xyz){
-        var filteredArray = xyz.filter(function(item){
-            if(item % 2 === 0){
-                console.log(item)
-            }
-        })
-    }
-    // whatever in () of abc represents xyz
-    abc([1,2,3,48,8]) 
-    abc([33,44,66,77,99])
+    //problem
+            // function fiveAndGreaterOnly(arr) {
+
+            // }
+            // fiveAndGreaterOnly([3, 6, 8, 2]); /// [6, 8]
+            // function fiveAndGreaterOnly(arr) {
+            //     var fivePlus = arr.filter(function(item){
+            //         if(item >= 5){
+            //             console.log(item)
+            //         }
+            //     })
+            // }
+            // fiveAndGreaterOnly([3, 6, 8, 9, 2]); /// [6, 8]
+
+    //practice
+    /////done/////// 2) Given an array of numbers, return a new array that only includes the even numbers.
+            // function abc(xyz){
+            //     var filteredArray = xyz.filter(function(item){
+            //         if(item % 2 === 0){
+            //             console.log(item)
+            //         }
+            //     })
+            // }
+            // // whatever in () of abc represents xyz
+            // abc([1,2,3,48,8]) 
+            // abc([33,44,66,77,99])
 
 
     // 3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
@@ -278,12 +299,18 @@ namesOnly([
     // ])
 
 
+///////letter frequency///////////
+// https://coursework.vschool.io/letter-frequency/
 
 
-
-
-
-
+var counter = str => {
+    return str.split('').reduce((total, letter) => {
+      total[letter] ? total[letter]++ : total[letter] = 1;
+      return total;
+    }, {});
+  };
+  
+  console.log(counter("slimy smelly solution"))
 
 
 
