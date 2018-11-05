@@ -43,7 +43,6 @@ function Player(name, hp){
         return Math.floor(Math.random() * (50 - 30) + 30)
     }
 }
-
 function Enemy(type, hp){
     this.type = type
     this.hp = hp
@@ -52,7 +51,6 @@ function Enemy(type, hp){
         return Math.floor(Math.random() * (25 - 5) + 5)
     }
 }
-
 ////////
 // Global Vars //
 var player1 = new Player("Steve", 100)

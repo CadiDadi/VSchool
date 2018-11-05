@@ -1,0 +1,42 @@
+/* https://coursework.vschool.io/css-grid/ */
+/* https://coursework.vschool.io/css-grid-practice/ */
+/* https://coursework.vschool.io/css-zen-garden/ */
+/* http://www.csszengarden.com/ */
+
+
+/* 
+display: grid;
+grid-template-columns: 100px 100px 100px; /*creates 3 columns 
+            rows 
+                        1fr 3fr     fractions of total 
+                        auto-fit 6  container 
+it will use full page size, or however big it's container, or parent container is 
+
+grid-column-row: 1 / 4  start at 1 end BEFORE 4 
+                 1 / span 3 /* does same thing 
+
+grid-template-areas:
+    "n n n n s"  
+    "m m m m s"
+     must be organized in 'in boxes' 
+    letters dont matter, use what you want - n = navigation, s = sidebar 
+
+
+grid & flex - use grid for main container, flex for child elements 
+*/
+
+#div1{
+
+}
+#div2{
+    
+}
+#div3{
+    
+}
+#div4{
+    
+}
+#div5{
+    
+}

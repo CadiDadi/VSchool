@@ -39,7 +39,8 @@ while(!gameEnd){
         break
     }
     else if (action === 'i'){
-        printInventory()
+        printInventory() //not working - undefined
+        break
     }
     else if(action === 'x'){
         console.log("You're a chicken, get out of here!")
@@ -50,7 +51,9 @@ while(!gameEnd){
         console.log(gameEnd)
     }
 }
-
+function printInventory(){
+    console.log(Player.items)
+}
 function walk(){
     var walkRandom = (Math.floor(Math.random() * 3))
     console.log(walkRandom)
@@ -76,17 +79,17 @@ function Enemy (name, hp){
 }
 var enemy1 = new Enemy("ghoul", 100)
 
-)
+
 function randomEnemy(){
     var enemyRandom = (Math.floor(Math.random() * 3))
     console.log(enemyRandom)
     //use Enemy constructor to create random enemies here
 }
 //all enemy1 need changed
-function fight(){
-    var currentEnemy = generateEnemy(function{
+// function fight(){
+//     var currentEnemy = generateEnemy(function){}
     //what here?
-    })
+    
     while(player1.hp >= 0 && enemy1.hp >=0){
         if(Math.random() < .5){
             player1.hp -= enemy1.attack()
@@ -101,11 +104,10 @@ function fight(){
     if(player1.hp <= 0){
         gameEnd = true;
     }else {
-        var itemFound = items[Math.floor(Math.random()*3)]
+        var itemFound = items[Math.floor(Math.random()*30)]
         player1.items.push(itemFound)
         //this resets enemy hp to 10? do i need this?
         // enemy1.hp = 10
         console.log(`You earned a ${itemFound}! n\Your Inventory: ${player1.items}`)
     }
-}
-
+// }
