@@ -4,8 +4,6 @@
 
 // extra stuff - https://coursework.vschool.io/rpg-strategy/
 
-// The year is 1985. Your job is to build a text-based (console) RPG game.
-
 // The point of this exercise is to better master Javascript functions, loops, conditionals, and some data types.
 
 // Project Requirements:
