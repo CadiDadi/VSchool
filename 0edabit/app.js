@@ -70,8 +70,12 @@ function month_name(num) {
 console.log(month_name(2)) // ➞ February
 console.log(month_name(5)) // ➞ May
 
-
-
+// Word Count - in a STRING (how many words in a string)
+function WordCount(str) { 
+    return str.split(" ").length
+}
+console.log(WordCount("hello world"))
+console.log(WordCount("hello world hi me no so"))
 
 
 

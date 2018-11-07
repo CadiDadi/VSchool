@@ -29,6 +29,10 @@ xhr.onreadystatechange = function () {
 xhr.open("GET", "https://vschool-cors.herokuapp.com?url=http://api.vschool.io/pokemon", true)
 xhr.send()
 
+// have to change js code for this:
+// xhr.open("GET", "https://vschool-cors.herokuapp.com?url=http://api.vschool.io/scott/todo", true)
+// xhr.send()
+
 
 
 

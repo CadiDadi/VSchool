@@ -32,7 +32,7 @@ console.log("\nWelcome to BlackWood Jungle! \n")
 var userName = readline.question('What is your name? ')
 console.log(`\nHi ${userName}, enjoy your time here! \nBut beware of the wild animals!! `)
 while(!gameEnd){
-    var action = readline.keyIn('\n1. Would you like to take a walk down the path? If so, press [w]. \n2. Feeling lucky punk? Fight one of our jungle animals. If you win, you earn some bling. To fight, press [f].\n3. If you are too scared, press [x] to leave now. \n\n4. To check your inventory of weapons, press [i]. \n5. To check your status, press [p]. \nEnter your option: ', {limit: ['w', 'x', 'i', 'f', 'p']})
+    var action = readline.keyIn('\n1. Would you like to take a walk down the path? If so, press [w]. \n2. Feeling lucky punk? Fight one of our jungle animals. If you win, you earn some bling. To fight, press [f].\n3. If you are too scared, press [x] to leave now. \n4. To check your inventory of weapons, press [i]. \n5. To check your status, press [p]. \n\nEnter your option: ', {limit: ['w', 'x', 'i', 'f', 'p']})
     if (action === 'w'){
         console.log("\nHopefully your walk will be uneventful. \n")
         walk()
@@ -59,39 +59,36 @@ function print(){
     console.log('Inventory: ' + player1.items)
 }
 function walk(){
-/////////////
-// 50-50 run or fight
-////////////
     var walkRandom = (Math.floor(Math.random() * 8) + 1) //1,2,3 = get attack. 4,5,6 = attack. 0,7,8 = no encounter 
-    console.log(walkRandom)
+    // console.log(walkRandom)
     if(walkRandom === 1) {
         enemy1.hp -= player1.attack()
-        console.log('\nSpank that Lion! Good job, you hurt him pretty bad.\n')
+        console.log('\nYou attack Lion\n')
         console.log(`Player hp: ${player1.hp} \nLion hp: ${enemy1.hp} \n`)
     }
     else if(walkRandom === 2) {
         enemy2.hp -= player1.attack()
-        console.log("\nBeat that Tiger's a**! you almost killed him\n")
+        console.log("\nYou attack Tiger\n")
         console.log(`Player hp: ${player1.hp} \nTiger hp: ${enemy2.hp} \n`)
     }
     else if(walkRandom === 3) {
         enemy3.hp -= player1.attack()
-        console.log('\nYou hurt him; Make that Bear run back to mommy! \n')
+        console.log('\nYou attack Bear\n')
         console.log(`Player hp: ${player1.hp} \nBear hp: ${enemy3.hp} \n`)
     }
     else if(walkRandom === 4) {
         player1.hp -= enemy1.attack()
-        console.log('\nSneaky Lion got you!  \n')
+        console.log('\nLion attacks you \n')
         console.log(`Player hp: ${player1.hp} \nLion hp: ${enemy1.hp} \n`)
     }
     else if(walkRandom === 5) {
         player1.hp -= enemy2.attack()
-        console.log('\nGotta watch out for that Tiger! You just lost 1 of your nine lives!\n')
+        console.log('\nTiger attacks you\n')
         console.log(`Player hp: ${player1.hp} \nTiger hp: ${enemy2.hp} \n`)
     }
     else if(walkRandom === 6) {
         player1.hp -= enemy3.attack()
-        console.log('\nThat Bear is no joke, he just hurt you pretty bad! \n')
+        console.log('\nBear attacks you\n')
         console.log(`Player hp: ${player1.hp} \nBear hp: ${enemy3.hp} \n`)
     }
     else if(walkRandom === 0 || walkRandom === 7 || walkRandom === 8){

@@ -1,3 +1,5 @@
+// https://coursework.vschool.io/localstorage-and-sessionstorage/
+
 // localStorage.setItem('name', 'jack')
 // var name = localStorage.getItem('name')
 // document.getElementById('local').innerHTML = `<h1>Local: ${name}</h1>`
@@ -30,7 +32,7 @@ function addUser (){
         name: document.storage.username.value,
         age: document.storage.age.value
     }
-    document.storage.username.value = ''
-    document.storage.age.value = ''
+    document.storage.username.value = 'testName'
+    document.storage.age.value = '21'  //needs to be a string
     users.push(newUser)
 }
