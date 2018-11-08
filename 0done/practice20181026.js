@@ -7,16 +7,16 @@
 //// 1. note when have string, must convert to array (.split)
 
 function highAndLow(numbers) {
-    var arr = numbers.split(" ").map(Number);
-    var largest = arr[0];
+    var arr = numbers.split(" ").map(Number)
+    var largest = arr[0]
     for (var i = 1; i < arr.length; i++) {
       if (arr[i] > largest) {
-        largest = arr[i];
+        largest = arr[i]
       }
     }
-    return largest;
+    return largest
 }  
-console.log(highAndLow("4 5 29 54 4 0 -214 54 -64 1 -3 6 -6"));
+console.log(highAndLow("4 5 29 54 4 0 -214 54 -64 1 -3 6 -6"))
 
 // 2. array
 function largest(numbers) {

@@ -1,6 +1,7 @@
 // axios
 
 //https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
+// https://www.sitepoint.com/building-list-jquery-local-storage/
 
 // info & assignmentS
     // https://coursework.vschool.io/axios/
@@ -38,7 +39,7 @@
     //done// The user can see their current list of todos.
     //done// Todos show up as soon as the page loads.
     //done-ish(turns red instead of strikethrough//  If a todo item is complete, it should have a strikethrough line on it
-    // Images should be displayed as images if there are any
+    //done// Images should be displayed as images if there are any
 
 function getData(){
     axios.get('https://api.vschool.io/scott/todo').then(function(response){
@@ -48,53 +49,98 @@ function getData(){
 }
 function listTodos(arr){
     for(var i = 0; i < arr.length; i++){
-                    // var todoId = arr[i]._id  // delete button (x of 3) 
+        // completed task element (for checkbox)
+            var todoId = arr[i]._id
         // Create container for specific TodoS
             var todoContainer = document.createElement('div')
         // Add a class to that container (if you want)
             todoContainer.classList.add('todo')
-        // add CSS color - grey
+        // add CSS to task containerS
             todoContainer.style.backgroundColor = '#e5e5e5'
-        // Create an html element
-        // Put the Todo title inside of that element
-            var title = document.createElement('h3')
+            todoContainer.style.borderStyle = 'solid'
+            todoContainer.style.padding = "0px 5px 0px 5px"
+            todoContainer.style.margin = '5px'
+        //title 
+            var title = document.createElement('h2')
             title.textContent = arr[i].title
-        //make description show (3 lines code needed)
+            title.style.borderStyle = 'solid'
+            title.style.borderWidth = '1px'
+            title.style.padding = "1px 5px"
+            title.style.margin = '10px 3px 5px 3px'
+        //description
             var headerDescription = document.createElement('h5')
             headerDescription.textContent = arr[i].description
+            headerDescription.style.borderStyle = 'dotted'
+            headerDescription.style.borderWidth = '1px'
+            headerDescription.style.padding = "5px"
+            headerDescription.style.margin = '1px 10px 1px 20px'
         //priceholder    
             var priceHolder = document.createElement('h5')
             priceHolder.textContent = arr[i].price
-//image holder  ?????these 2 lines need fixed?????? //
+            priceHolder.style.borderStyle = 'dotted'
+            priceHolder.style.borderWidth = '1px'
+            priceHolder.style.padding = "5px"
+            priceHolder.style.margin = '1px 10px 1px 20px'
+            if(!arr[i].price){
+                priceHolder.style.display = 'none'
+            }
+        //image holder (note setAttribute)
             var imageHolder = document.createElement('img')
             imageHolder.setAttribute('src', arr[i].imgUrl)
+            imageHolder.style.height = '70px'
+            imageHolder.style.width = '70px'
+            imageHolder.style.padding = "5px"
+            imageHolder.style.margin = '1px 0px 1px 70px'
+            if(!arr[i].imgUrl){
+                imageHolder.style.display = 'none'
+            }
         //checkbox
             var checkbox = document.createElement('input')
-            checkbox.type = "checkbox"
-        // checkbox.id = "id"
+            checkbox.type = "checkbox" 
+            checkbox.id = todoId 
+            checkbox.addEventListener("change", function(event){
+                event.preventDefault()
+                let completeObj = {}
+                completeObj.completed = this.checked
+                    console.log(checkbox.id)
+                    axios.put(`https://api.vschool.io/scott/todo/${this.id}`, completeObj).then(function(response){
+                        console.log(response.data)
+                    })
+            })
+            console.log(arr[i].completed)
+        // label for checkbox
             var label = document.createElement('label')
-        // label.htmlFor = "id"
+            // label.style.color = '#f3d'
+            label.style.fontSize = '14px'
             label.appendChild(document.createTextNode(' check if completed'))
-        //if tasks are complete, CSS strikethrough - to indicate complete (do in CSS, right now show up different color)
-            if(arr[i].completed === true){
-                    title.style.backgroundColor = '#f3d'
-                    // arr[i].completed.strike()
-            }        
+
+        //checkbox - if tasks are complete, CSS strikethrough - to indicate complete (do in CSS, right now show up different color)
+            if(arr[i].completed === true){                    
+                    //if COMPLETED status is TRUE, changes todo box color to green
+                    checkbox.checked = true
+                    todoContainer.style.backgroundColor = '#3f3'
+                    // title.strike()
+            } 
+        // delete button
+            var buttonHolder = document.createElement('button')
+            buttonHolder.textContent = "Delete"
+            buttonHolder.id = todoId  
+ /////////////
+                         
         // Put elementS on the DOM
+            todoContainer.appendChild(checkbox)
+            todoContainer.appendChild(label)
+            todoContainer.appendChild(imageHolder)
             todoContainer.appendChild(title)
             todoContainer.appendChild(headerDescription)
             todoContainer.appendChild(priceHolder)
             todoContainer.appendChild(imageHolder)
-            title.appendChild(checkbox)
-            title.appendChild(label)
+            todoContainer.appendChild(buttonHolder)
             document.getElementById('list-container').appendChild(todoContainer)
     }
 }
-
 // Part 2 - POST a new todo
     //done// The user can add new todos to their list. The new item should be posted to the todo API so a future reload of the page will still display that new todo item.
-
-// TO DO - A user should be able to attach an imgUrl to the item
 
 var todoForm = document.addTodoForm
 todoForm.addEventListener("submit", function(event){
@@ -106,33 +152,33 @@ todoForm.addEventListener("submit", function(event){
         var description = todoForm.description.value
     // A user should be able to give the item a price.
         var price = todoForm.price.value
-    //image
-        var imageUrl = todoForm.imageUrl
-    // Put that inputS in an object
+    //User can attach an image Url  - sample image url -   http://pngimg.com/uploads/smiley/smiley_PNG36233.png
+        var imageUrl = todoForm.imageUrl.value
+    // Put the inputS in an object
         var newTodo = {}
         newTodo.title = title
         newTodo.description = description
         newTodo.price = price
-        newTodo.imageUrl = imageUrl
+        newTodo.imgUrl = imageUrl
     // Send a Post request
         axios.post('https://api.vschool.io/scott/todo', newTodo).then(function(response){
         console.log(response.data) // should be new todo with an _id added
     // Then refresh page to see item added to existing list.
-    })
+        })
+        .catch(function(err){
+            console.log(err)
+        })
 })
 getData()
     
-// Part 3 - PUT Part 1
-    //in part 1// Each todo will have a checkbox where it can be marked complete or incomplete
-    //in part 1// Checking the checkbox should update the database
+// Part 3 - PUT - Part 1
+    //done - in part 1// Each todo will have a checkbox where it can be marked complete or incomplete
+    //done - in part 1// Checking the checkbox should update the database
+
 
 // Part 4 - DELETE
     // A user will be able to delete todos (this is different from marking a todo as "completed")
     // Each todo should be rendered with a button marked "X" or "Delete" that when clicked, will delete the Todo
-
-// button.textContent = "Delete"// delete button 
-// button.id = todoId  // delete button 
-
 
 // Part 5 - PUT Part 2
     // Each Todo will have an "edit" button.
