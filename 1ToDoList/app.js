@@ -41,12 +41,13 @@
     //done-ish(turns red instead of strikethrough//  If a todo item is complete, it should have a strikethrough line on it
     //done// Images should be displayed as images if there are any
 
-function getData(){
-    axios.get('https://api.vschool.io/scott/todo').then(function(response){
-        console.log(response.data)
-        listTodos(response.data)
-    })
-}
+axios.get('https://api.vschool.io/scott/todo').then(function(response){
+    // const toDoGet = response.data
+    // toDoGet.forEach(function(toDoItem){
+    //     listTodos(toDoGet)
+    // })
+listTodos(response.data)
+})
 function listTodos(arr){
     for(var i = 0; i < arr.length; i++){
         // completed task element (for checkbox)
@@ -99,43 +100,53 @@ function listTodos(arr){
             checkbox.type = "checkbox" 
             checkbox.id = todoId 
             checkbox.addEventListener("change", function(event){
-                event.preventDefault()
+                // event.preventDefault()
                 let completeObj = {}
                 completeObj.completed = this.checked
-                    console.log(checkbox.id)
-                    axios.put(`https://api.vschool.io/scott/todo/${this.id}`, completeObj).then(function(response){
-                        console.log(response.data)
-                    })
+                console.log(checkbox.id)
+                axios.put(`https://api.vschool.io/scott/todo/${this.id}`, completeObj).then(function(response){
+                    console.log(response.data)
+                })
             })
-            console.log(arr[i].completed)
         // label for checkbox
             var label = document.createElement('label')
-            // label.style.color = '#f3d'
+            label.style.color = '#00ff'
             label.style.fontSize = '14px'
-            label.appendChild(document.createTextNode(' check if completed'))
-
+            label.appendChild(document.createTextNode(' completed'))
         //checkbox - if tasks are complete, CSS strikethrough - to indicate complete (do in CSS, right now show up different color)
             if(arr[i].completed === true){                    
                     //if COMPLETED status is TRUE, changes todo box color to green
                     checkbox.checked = true
                     todoContainer.style.backgroundColor = '#3f3'
+                    imageHolder.style.display = 'none'
+                    headerDescription.style.display = 'none'
+                    priceHolder.style.display = 'none'
+
                     // title.strike()
             } 
         // delete button
-            var buttonHolder = document.createElement('button')
-            buttonHolder.textContent = "Delete"
-            buttonHolder.id = todoId  
- /////////////
+            var deleteButton = document.createElement('button')
+            deleteButton.textContent = "Delete Task"
+            deleteButton.id = todoId 
+            deleteButton.style.margin = '4px'
+            deleteButton.style.backgroundColor = '#ff0000' 
+            deleteButton.addEventListener("click", function(event){
+                // event.preventDefault()
+                axios.delete(`https://api.vschool.io/scott/todo/${this.id}`).then(function(response){
+                    console.log(response.data)
+                    // todoContainer.removeChild(this.parentNode)
+                })
+            })
+console.log(arr[i].completed)
                          
         // Put elementS on the DOM
             todoContainer.appendChild(checkbox)
             todoContainer.appendChild(label)
-            todoContainer.appendChild(imageHolder)
             todoContainer.appendChild(title)
             todoContainer.appendChild(headerDescription)
             todoContainer.appendChild(priceHolder)
+            todoContainer.appendChild(deleteButton)
             todoContainer.appendChild(imageHolder)
-            todoContainer.appendChild(buttonHolder)
             document.getElementById('list-container').appendChild(todoContainer)
     }
 }
@@ -162,24 +173,20 @@ todoForm.addEventListener("submit", function(event){
         newTodo.imgUrl = imageUrl
     // Send a Post request
         axios.post('https://api.vschool.io/scott/todo', newTodo).then(function(response){
-        console.log(response.data) // should be new todo with an _id added
+        listTodos(response.data) // should be new todo with an _id added
     // Then refresh page to see item added to existing list.
         })
         .catch(function(err){
             console.log(err)
         })
 })
-getData()
     
-// Part 3 - PUT - Part 1
+// Part 3 - PUT - Part 1  //done - in part 1// 
     //done - in part 1// Each todo will have a checkbox where it can be marked complete or incomplete
     //done - in part 1// Checking the checkbox should update the database
-
-
-// Part 4 - DELETE
+// Part 4 - DELETE  //done - in part 1// 
     // A user will be able to delete todos (this is different from marking a todo as "completed")
     // Each todo should be rendered with a button marked "X" or "Delete" that when clicked, will delete the Todo
-
 // Part 5 - PUT Part 2
     // Each Todo will have an "edit" button.
     // When clicked, the info will change to input boxes that are autofilled with the old Todo data
