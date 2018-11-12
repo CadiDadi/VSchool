@@ -1,0 +1,250 @@
+/* CSS Grid
+
+***see notes below***
+
+- https://coursework.vschool.io/css-grid/
+- great tutorial - https://scrimba.com/g/gR8PTE */
+
+
+/* BASIC STYLING */
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+.container > div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+.container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+/* CSS GRID STYLING - Notes from  - https://scrimba.com/g/gR8PTE 
+
+//////////// base setup //////////
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="basic.css">
+        <style>
+            .container > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1em;
+                color: #ffeead;
+            }
+            html, body {
+            box-sizing: border-box;
+            background-color: #ffeead;
+            height: 100%;
+            padding: 10px;
+            margin: 0px;
+            }
+            .container > div:nth-child(1n) {
+                background-color: #96ceb4;	
+            }
+            .container > div:nth-child(3n) {
+                background-color: #88d8b0;
+            }
+            .container > div:nth-child(2n) {
+                background-color: #ff6f69;
+            }
+            .container > div:nth-child(4n) {
+                background-color: #ffcc5c;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
+    </body>
+</html>
+/////////////////////////
+
+    - LINES (column & row) - there are 'lines' inbetween every column or row. you specify which columns/rows you want by saying which LINES you want to start and stop:
+        | column1 | column2 | column3 |
+            if you want something to span/use columns 1 & 2, you would say start at LINE 1 & end at LINE 3:
+                grid-column: 1 / 3;
+    - fr = fraction (take up x fraction(s) of whatever total)
+        - these two equal the same thing = 3 columns, each taking up 1 fraction of total container
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr 1fr 1fr;
+    - fraction (1fr) vs fixed size (100px) - fractions make page responsive, not fixed sizes
+    - Height/vertically responsive - set container (.container) height to 100% to make responsive Vertically
+    - specifying -1 as the END POINT of Rows or Columns, will take it to the very end (helpful if dont know/will change total amount
+        this says start at column line 1, end at last column line:
+        grid-column: 1 / -1;
+    - grid AREAS - create visual representation of layout in grid-template-areas, then can identify them by letters. 
+        -can use any letters - smart to label them based on your elements: h = .header, m = .menu, etc
+        - use dots '.' to make a blank area. ex. change h to .
+        - similar items must be grouped as rectangles (can be only one row or column, or multiple):     h h     m m    c
+                               m m    c
+
+                            .container {
+                                height: 100%;
+                                display: grid;
+                                grid-gap: 3px;
+                                grid-template-columns: repeat(12, 1fr);
+                                grid-template-rows: 40px auto 40px;
+                                grid-template-areas: 
+                                    "h h h h h h h h h h h h"
+                                    "m c c c c c c c c c c c"
+                                    "f f f f f f f f f f f f";
+                            }
+                            .header {
+                                grid-area: h;
+                            }
+                            .menu {
+                                grid-area: m;
+                            }
+                            .content {
+                                grid-area: c;
+                            }
+                            .footer {
+                                grid-area: f;
+                            }
+
+    - auto-fit - puts as many elements as possible on a row or column, based on screen size changing: grid-template-columns. here each element is 100px and auto-fit re screen size
+            grid-template-columns: repeat(auto-fit, 100px);
+    - minmax - sets minimum and maximum element size. here elements min size is 100px, max size 1 fraction. could use minmax(100px, 200px). Using 1fr is best practice
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    - implicit rows - create new rows automatically, designed how we want.
+            -when items move down when resizing page, they can lose their styling (height,width, etc)
+            - here we only have settings for the first two rows, so if elements have to move down due to screen resizing, the next row styling isnt defined, so it will do whatever built-in styling:
+                    grid-template-rows: 100px 100px;
+                - to fix this, we can set default styling for every row (can just use this to apply styles to all rows
+                    grid-auto-rows: 100px;
+                - can set some to certain styling, then any others to be a default styling. here the first two rows will be 200px, any others will be 100px
+                        grid-template-rows: 200px 200px;
+                        grid-auto-rows: 100px;
+    - image grid
+            - if dont want all images/elements to be the same size, 
+            - this however, can cause gaps (because diff sizes). using FLOW - DENSE setting, fixes this; and is an example of Source Order Independence - regardless of the order of the elements laid out in HTML, they can be moved around with CSS.
+            make setting changes:
+                        .container {
+                            display: grid;
+                            grid-gap: 5px;
+                            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                            grid-auto-rows: 75px;
+                            /////fix gaps 
+                            grid-auto-flow: dense;
+                        }
+                        .horizontal {
+                            grid-column: span 2; (you can specify where to start in you want: 1 / span 2;
+                        }
+                        ////same for vertical (however big you want):    
+                        .vertical {
+                            grid-row: span 3;
+                        }
+                        //change both height & width for specific images/elements
+                        .big {
+                            grid-column: span 2;
+                            grid-row: span 2;
+                        }    
+    - named lines (column & row) - giving names to grid lines
+            - grid line names are where they physically would be: | 1fr | 2fr |. then use the names in element settings. If spans all of one 'named space', can short hand it: 
+                        from: grid-column: content-start / content-end;
+                        to:   grid-column: content
+            - can assign multiple names to one grid line
+            - grid-area: - works only in you have a rectangle spanning xxx (come back to this to learn)
+                        .container {
+                            height: 100%; 
+                            display: grid;
+                            grid-gap: 3px;
+                            grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+                            grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end]; 
+                        }
+                        .header {
+                            grid-column: main;
+                        }
+                        .menu {}
+                        .content {
+                            grid-column: content;
+                        }
+                        .footer {
+                            grid-column: main;
+                        }
+    - justify-content & align-content
+            justify/align-content: start (default), center, end, space-between, space-around, space-evenly, 
+                        justify-content: space-between
+                        align-content: center
+    - justify-items & align-items
+            justify/align-items: stretch (fit container)(default), center, end, start
+                        align - along column/vertical axis
+                        justify - along row/horizontal axis
+            can apply to main container or child elements
+                        .container {
+                            height: 100%; 
+                            display: grid;
+                            grid-template-columns: repeat(12, 1fr);
+                            grid-template-rows: 40px auto 40px;
+                            //justify-items: center;
+                            //align-items: center;
+                        }
+                        .content {
+                            grid-column: 3 / -1;
+                            justify-self: center;
+                            align-self: end;
+                        }
+    - auto-fit vs auto-fill
+        both will add new element spaces when screen size increases, however:
+            -auto-fill - adds them the same size as the size we indicate (100px)
+            auto-fit - adds them but makes them 0px until filled (which makes current items stretch to fit size of screen
+                        .container {
+                            border: 1px solid black;
+                            display: grid;
+                            grid-gap: 5px;
+                            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                            grid-template-rows: 100px 100px;
+                        }
+
+                        .container2 {
+                            border: 1px solid black;
+                            display: grid;
+                            grid-gap: 5px;
+                            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                            grid-template-rows: 100px 100px;
+                        }
+    - creating article layout
+        - see GridArticle folder
+    
+    - grid vs flexbox
+        - see Flex&Grid folder
+            - flexbox build for 1 dimensional 
+                - only 1 row or column  
+                - content-before-style - html spacing overrides css 
+            - grid - 2 dimensional
+                - multiple rows, columns
+                - style-before-content - css styling overrides html layout of elements
+            - combine grid & flexbox - put flexbox inside grid elements
+        
+
+
+
+
+////////////////////////////////////
+
+////////////////////////////////////
+
+
+
+
