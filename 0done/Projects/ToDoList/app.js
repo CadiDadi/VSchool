@@ -1,10 +1,10 @@
-// function getData(){
+function getData(){
     axios.get('https://api.vschool.io/scott/todo').then(function(response){
         listTodos(response.data)
         console.log(response)
     })
-// }
-// getData()
+    .catch(err => console.log(err))
+}
 function editFormContent(button) {
     if (button.textContent === "Edit") {
         button.textContent = "Submit"
@@ -195,4 +195,4 @@ todoForm.addEventListener("submit", function(event){
         })
 })
 
-// getData()   
+getData()   
