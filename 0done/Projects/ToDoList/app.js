@@ -1,3 +1,6 @@
+// ASYNCHRONOUS - Wipe out <div> containing all Todos, then recall 'get' function to retrieve and render the updated list of todos
+const clearer = document.getElementById('list-container')
+
 function getData(){
     axios.get('https://api.vschool.io/scott/todo').then(function(response){
         listTodos(response.data)
@@ -60,7 +63,9 @@ function listTodos(arr){
                 completeObj.completed = this.checked
                 console.log(checkbox.id)
                 axios.put(`https://api.vschool.io/scott/todo/${this.id}`, completeObj).then(function(response){
-                    console.log(response.data)
+                    // ASYNCHRONOUS - Wipe out <div> containing all Todos, then recall 'get' function to retrieve and render the updated list of todos
+                    clearer.innerHTML = ""
+                    getData()
                 })
             })
         var label = document.createElement('label')
@@ -82,7 +87,9 @@ function listTodos(arr){
             deleteButton.addEventListener("click", function(event){
                 event.preventDefault()
                 axios.delete(`https://api.vschool.io/scott/todo/${this.id}`).then(function(response){
-                    console.log(response.data)
+                    // ASYNCHRONOUS - Wipe out <div> containing all Todos, then recall 'get' function to retrieve and render the updated list of todos
+                    clearer.innerHTML = ""
+                    getData()
                 })
             })
         var editButton = document.createElement('button')
@@ -139,6 +146,9 @@ function listTodos(arr){
                 console.log(response.data)
             })
             editFormContent(editButton)
+            //ASYNCHRONOUS - DOESNT WORK
+            // clearer.innerHTML = ""
+            // getData()
         })
         // Put elementS on the DOM
             todoContainer.appendChild(title)
@@ -165,13 +175,13 @@ function listTodos(arr){
             // editContainer.appendChild(editDescription)
             // editContainer.appendChild(editPrice)
             // // editContainer.appendChild(editButton)
-            // document.getElementById('edit-container').appendChild(editContainer)
-            
+            // document.getElementById('edit-container').appendChild(editContainer
     }
 }
 var todoForm = document.addTodoForm
 todoForm.addEventListener("submit", function(event){
     event.preventDefault()
+    // const clearer = document.getElementById('list-container')
     // When the user submits, Grab the user inputS
         var title = todoForm.title.value
     // A user should be able to give the item a description
@@ -187,8 +197,9 @@ todoForm.addEventListener("submit", function(event){
         newTodo.imgUrl = imageUrl
     // Send a Post request
         axios.post('https://api.vschool.io/scott/todo', newTodo).then(function(response){
-        listTodos(response.data) // new todo with an _id added
-    // Then refresh page to see item added to existing list.
+            // ASYNCHRONOUS - Wipe out <div> containing all Todos, then recall 'get' function to retrieve and render the updated list of todos
+            clearer.innerHTML = ""
+            getData()
         })
         .catch(function(err){
             console.log(err)
