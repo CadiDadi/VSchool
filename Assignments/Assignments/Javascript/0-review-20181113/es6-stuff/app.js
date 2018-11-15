@@ -5,7 +5,7 @@
         // Object and Array Destructuring  
         // Object Literals
         // Default Parameters
-        // Spread and Rest(gather)
+        // Spread and Rest(gather)  
         // Import/Export
 
 // const & let
@@ -134,6 +134,7 @@ const arr = [6, 2, 7, 4, 1, 5, 3]
     //                 // SPREAD
     // const newArr = [...arr1, ...arr2]
     // console.log(newArr)
+
     // const person = {name: 'joe', age: 30}
 
 
