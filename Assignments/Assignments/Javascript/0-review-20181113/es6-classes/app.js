@@ -27,10 +27,14 @@ class Person {
     constructor(name, age){
         this.name = name
         this.age = age
+        this.height = height
     }
     // Automatically added to Object's Prototype
     speak(){
         console.log(`${this.name} says hi!`)
+    }
+    run(){
+        console.log('Run Fool')
     }
 }
 

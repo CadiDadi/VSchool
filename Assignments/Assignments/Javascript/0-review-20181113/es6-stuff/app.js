@@ -137,17 +137,43 @@ const arr = [6, 2, 7, 4, 1, 5, 3]
 
     // const person = {name: 'joe', age: 30}
 
+    // Spread
+
+        console.log('-----------')
+        var bird = 'falcon'
+            console.log(bird)
+            console.log(...bird)
+            console.log([bird])
+            console.log([...bird])
+        console.log('-----------')
+        let birds = ['crow', 'eagle']
+            console.log(birds)
+            console.log(...birds)
+            console.log([birds])
+            console.log([...birds])
+
+    // Rest
+
+        console.log('-----------')
+        const cats = (...args) => {
+            //length of each string has more than 2 characters
+            const filteredArgs = args.filter(item => item.length > 2)
+            console.log(args)
+            console.log(filteredArgs)
+        }
+        cats('s', 'ddd', 'chth')
+        console.log('-----------')
 
 // Import/Export
     //import:   const ask = require('readline-sync')
     //export:   module.exports = whateverWereExporting
 
         // Main.js
-    import function1 from 'Functions.js'
-    import { function2, function3, function4 } from 'Functions.js'
+    // import function1 from 'Functions.js'
+    // import { function2, function3, function4 } from 'Functions.js'
 
         // Functions.js
-    export default function1
-    export function2
-    export function3
-    export function4
+    // export default function1
+    // export function2
+    // export function3
+    // export function4
