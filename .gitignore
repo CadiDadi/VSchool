@@ -1,5 +1,9 @@
+
+# ignore everything
+/*
+/*/
+# except dont ignore
+!/Assignments/
+# inside any un-ignored directories, still ignore
 node_modules/
-0edabit/
-AZZZ-notes/
-AZZZ-notVSchoolcoding/
-React/
+.ds_store
