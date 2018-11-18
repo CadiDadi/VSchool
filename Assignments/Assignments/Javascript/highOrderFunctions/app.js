@@ -8,9 +8,7 @@
         // https://coursework.vschool.io/array-filter-exercises/
         // https://coursework.vschool.io/array-reduce-exercises/
         // https://coursework.vschool.io/array-sort-exercises/
-        // https://coursework.vschool.io/letter-frequency/
-
-// extra
+// extra credit
         // https://coursework.vschool.io/settimeout-setinterval/
 
 /////////////////////////////////////////////
@@ -38,7 +36,6 @@
     // })
     // console.log(newArr)  // returns [ 2, 3, 4, 5 ]
     
-
 // .map() => loops over the array
     // Returns a NEW array with specified changes, you will want to save result in a variable:
         // ex:  var newArr = arr.map()
@@ -84,104 +81,104 @@
         // }
         // doubleNumbers([2, 5, 100]); 
 
-///////done/////// 2) Take an array of numbers and make them strings
-// function stringItUp(arr){
-//     var stringified = arr.map(function(item){
-//         return item.toString()
-//     })
-//     console.log(stringified) //returns ["2", "5", "100"]
-// }
-// stringItUp([2, 5, 100]); 
+// 2) Take an array of numbers and make them strings
+        // function stringItUp(arr){
+        //     var stringified = arr.map(function(item){
+        //         return item.toString()
+        //     })
+        //     console.log(stringified) //returns ["2", "5", "100"]
+        // }
+        // stringItUp([2, 5, 100]); 
 
-//////done///// 3) Capitalize first letter of each of an array of names & turn rest into lower case
-function capitalizeNames(arr){
-    var capitalized = arr.map(function(item){
-        return item.charAt(0).toUpperCase() + item.substr(1).toLowerCase()
-    })
-    console.log(capitalized) //returns ["John", "Jacob", "Jingleheimer", "Schmidt"]
-}
-capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]); 
+// 3) Capitalize first letter of each of an array of names & turn rest into lower case
+        function capitalizeNames(arr){
+            var capitalized = arr.map(function(item){
+                return item.charAt(0).toUpperCase() + item.substr(1).toLowerCase()
+            })
+            console.log(capitalized) //returns ["John", "Jacob", "Jingleheimer", "Schmidt"]
+        }
+        capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]); 
 
-/////////// 4) Make an array of strings of the names
-function namesOnly(arr){
-    ///enter code here
-}
-namesOnly([
-    {
-        name: "Angelina Jolie",
-        age: 80
-    },
-    {
-        name: "Eric Jones",
-        age: 2
-    },
-    {
-        name: "Bob Ziroll",
-        age: 100
-    }
-]) 
-// ["Angelina Jolie", "Eric Jones", "Bob Ziroll"]
+// 4) Make an array of strings of the names
+        function namesOnly(arr){
+            ///enter code here
+        }
+        namesOnly([
+            {
+                name: "Angelina Jolie",
+                age: 80
+            },
+            {
+                name: "Eric Jones",
+                age: 2
+            },
+            {
+                name: "Bob Ziroll",
+                age: 100
+            }
+        ]) 
+        // ["Angelina Jolie", "Eric Jones", "Bob Ziroll"]
 
-////example////
-// var countries = {
-//     China: 1371980000,
-//     India: 1276860000,
-//     Pakistan: 190860000
-// };
-// var countriesFiltered = Object.keys(countries).filter(function(key) {
-//     return countries[key]
-// })
-// .map(function(key) {
-//     return countries[key]
-// });
-// console.log(countriesFiltered)  // Returns: [321786000, 255461700, 204873000, 190860000]
+// 4. example
+        // var countries = {
+        //     China: 1371980000,
+        //     India: 1276860000,
+        //     Pakistan: 190860000
+        // };
+        // var countriesFiltered = Object.keys(countries).filter(function(key) {
+        //     return countries[key]
+        // })
+        // .map(function(key) {
+        //     return countries[key]
+        // });
+        // console.log(countriesFiltered)  // Returns: [321786000, 255461700, 204873000, 190860000]
 
 
-////////// 5) Make an array of strings of the names saying whether or not they can go to The Matrix
+// 5) Make an array of strings of the names saying whether or not they can go to The Matrix
 
-// function makeStrings(arr){
+        // function makeStrings(arr){
 
-// }
-// makeStrings([
-//     {
-//         name: "Angelina Jolie",
-//         age: 80
-//     },
-//     {
-//         name: "Eric Jones",
-//         age: 2
-//     },
-//     {
-//         name: "Bob Ziroll",
-//         age: 100
-//     }
-// ]) 
-// // ["Angelina Jolie can go to The Matrix", 
-// // "Eric Jones is under age!!", 
-// // "Bob Ziroll can go to The Matrix"]
+        // }
+        // makeStrings([
+        //     {
+        //         name: "Angelina Jolie",
+        //         age: 80
+        //     },
+        //     {
+        //         name: "Eric Jones",
+        //         age: 2
+        //     },
+        //     {
+        //         name: "Bob Ziroll",
+        //         age: 100
+        //     }
+        // ]) 
+        // // ["Angelina Jolie can go to The Matrix", 
+        // // "Eric Jones is under age!!", 
+        // // "Bob Ziroll can go to The Matrix"]
 
 // 6) Make an array of the names in <h1>s, and the ages in <h2>s
 
-// function readyToPutInTheDOM(arr){
+        // function readyToPutInTheDOM(arr){
 
-// }
-// readyToPutInTheDOM([
-//     {
-//         name: "Angelina Jolie",
-//         age: 80
-//     },
-//     {
-//         name: "Eric Jones",
-//         age: 2
-//     },
-//     {
-//         name: "Bob Ziroll",
-//         age: 100
-//     }
-// ]) 
-// // ["<h1>Angelina Jolie</h1><h2>80</h2>", 
-// // "<h1>Eric Jones</h1><h2>2</h2>", 
-// // "<h1>Bob Ziroll</h1><h2>100</h2>"]
+        // }
+        // readyToPutInTheDOM([
+        //     {
+        //         name: "Angelina Jolie",
+        //         age: 80
+        //     },
+        //     {
+        //         name: "Eric Jones",
+        //         age: 2
+        //     },
+        //     {
+        //         name: "Bob Ziroll",
+        //         age: 100
+        //     }
+        // ]) 
+        // // ["<h1>Angelina Jolie</h1><h2>80</h2>", 
+        // // "<h1>Eric Jones</h1><h2>2</h2>", 
+        // // "<h1>Bob Ziroll</h1><h2>100</h2>"]
 
 
 //////// array filters//////////////////////////
@@ -198,9 +195,9 @@ namesOnly([
 
     // Use the built-in array method .filter() to solve all of these problems
 
-    //done// 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+    // 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
     
-    //ex. 1
+    // a)
         // function BiggerElements(val){
         //  return function(value, index, array){
         //  return (value >= val)
@@ -209,7 +206,7 @@ namesOnly([
         // var result = [11, 45, 4, 31, 3, 99, 64, 10].filter(BiggerElements(10))
         // console.log(result)
 
-    //problem
+    // b)
             // function fiveAndGreaterOnly(arr) {
 
             // }
@@ -223,8 +220,7 @@ namesOnly([
             // }
             // fiveAndGreaterOnly([3, 6, 8, 9, 2]); /// [6, 8]
 
-    //practice
-    /////done/////// 2) Given an array of numbers, return a new array that only includes the even numbers.
+    // 2) Given an array of numbers, return a new array that only includes the even numbers.
             // function abc(xyz){
             //     var filteredArray = xyz.filter(function(item){
             //         if(item % 2 === 0){
@@ -236,18 +232,16 @@ namesOnly([
             // abc([1,2,3,48,8]) 
             // abc([33,44,66,77,99])
 
+// 3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+        // function fiveCharactersOrFewerOnly(arr) {
+        
+        // }
+        // fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"]) // ["by", "dog", "wolf", "eaten"]
 
-    // 3) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
-    // function fiveCharactersOrFewerOnly(arr) {
-    
-    // }
-    
-    // fiveCharactersOrFewerOnly(["dog", "wolf", "by", "family", "eaten", "camping"]) // ["by", "dog", "wolf", "eaten"]
-    // 4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
+// 4) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
     // function peopleWhoBelongToTheIlluminati(arr){
     
-    // }
-    
+    // }   
     // peopleWhoBelongToTheIlluminati([
     //     {
     //         name: "Angelina Jolie",
@@ -258,19 +252,12 @@ namesOnly([
     //         member: false
     //     },
     //     {
-    //         name: "Paris Hilton",
-    //         member: true
-    //     },
-    //     {
-    //         name: "Kayne West",
-    //         member: false
-    //     },
-    //     {
     //         name: "Bob Ziroll",
     //         member: true
     //     }
     // ])
-    // 5) Filter out all the people who are not old enough to see The Matrix (younger than 18)
+
+// 5) Filter out all the people who are not old enough to see The Matrix (younger than 18)
     // function ofAge(arr){
     
     // }
@@ -297,68 +284,3 @@ namesOnly([
     //         age: 100
     //     }
     // ])
-
-
-///////letter frequency///////////
-// https://coursework.vschool.io/letter-frequency/
-
-
-var counter = str => {
-    return str.split('').reduce((total, letter) => {
-      total[letter] ? total[letter]++ : total[letter] = 1;
-      return total;
-    }, {});
-  };
-  
-  console.log(counter("slimy smelly solution"))
-
-
-
-
-
-
-////////marcus notes///////
-
-// var numbers = [1,2,3];
-
-// var numTotal = numbers.reduce(function(total, num){
-//     return total + num
-// })
-
-// console.log(numTotal)
-
-// var sortedArray = [1,57,93,2,13];
-
-// sortedArray.sort(function(a,b){
-//   //a - b sorts low to high
-//   //b - a sorts high to low
-//   return b - a
-// })
-
-// var sortedWords = ['dog', 'cat', 'ant', 'mouse']
-// sortedWords.sort()
-
-// console.log(sortedWords)
-
-
-// var numbers = [12,54,3,62,19,79];
-
-// var foundNumber = numbers.find(function(number){
-//   return number < 5
-// })
-// console.log(foundNumber)
-
-// var numbers = [13,30,5,62,18,53]
-
-// var someNum = numbers.some(function(number){
-//   return number > 100
-// })
-// console.log(someNum)
-
-// var everyNum = numbers.every(function(number){
-//   return number < 100 
-// })
-// console.log(everyNum)
-
-
-

@@ -8,21 +8,20 @@
 // Each value will be the character's frequency.
 
 // Example:
-// Const phrase = 'slimy smelly solution';
-// arrayIndex = (str) => {
-// // Manipulation of str to create an object
-// }
-// console.log(arrayIndex(phrase));
-
-// //Output: { s: 3, l: 4, i: 2, m: 2, y: 2, ' ': 2, e: 1, o: 2, u: 1, t: 1, n: 1 }
+        Const phrase = 'slimy smelly solution';
+        arrayIndex = (str) => {
+        // Manipulation of str to create an object
+        }
+        console.log(arrayIndex(phrase));
+        //Output: { s: 3, l: 4, i: 2, m: 2, y: 2, ' ': 2, e: 1, o: 2, u: 1, t: 1, n: 1 }
 
 // Hint:
-// function hint() {
-//     const obj = {}
-//     obj["s"] = 1
-//     return obj
-// }
-// console.log(hint())   //Output: {s: 1}
+        function hint() {
+            const obj = {}
+            obj["s"] = 1
+            return obj
+        }
+        console.log(hint())   //Output: {s: 1}
 
 function getFrequency(string) {
     var freq = {}
@@ -37,6 +36,16 @@ function getFrequency(string) {
     return freq
 }
 console.log(getFrequency('slimy smelly solution'))
+
+
+var counter = str => {
+    return str.split('').reduce((total, letter) => {
+      total[letter] ? total[letter]++ : total[letter] = 1;
+      return total;
+    }, {});
+  };
+  
+  console.log(counter("slimy smelly solution"))
 
 // Extra Credit
 // Output the original string with all duplicate characters removed (i.e. "slimy eoutn").
