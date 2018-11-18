@@ -1,9 +1,4 @@
-
-# ignore everything
-/*
-/*/
-# except dont ignore
-!/Assignments/
-# inside any un-ignored directories, still ignore
 node_modules/
-.ds_store
+000/
+notes/
+notVSchoolcoding/
