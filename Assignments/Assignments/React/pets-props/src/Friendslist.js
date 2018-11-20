@@ -1,6 +1,6 @@
 import React from 'react'
 import Friend from './Friend'
-
+ 
 const friends = [
   {
     name: "Ben",
