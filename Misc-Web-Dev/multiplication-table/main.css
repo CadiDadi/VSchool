@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(163, 162, 158);
+    font-family: Verdana;
+    justify-content: center;
+    text-align: center;
+  }
+table, h1{
+    display: flex;
+    justify-content: center;
+}
+tr{ 
+    height:30px;   
+}
+td{
+    width:40px;
+}
+
+
+
