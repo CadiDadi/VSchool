@@ -1,0 +1,30 @@
+body {
+   height: 100%;
+   background-attachment: fixed;
+} 
+div {
+    /* background-color: blue; */
+    margin: 2px;
+    padding: 4px;
+}
+.spot {
+    background-color: blueviolet;
+    margin: 20px;
+    text-align: center;
+}
+.heading {
+    /* color: white; */
+    text-align: center;
+}
+.backgroundGreen {
+    background-color: green;
+}
+.backgroundYellow {
+    background-color: yellow;
+}
+.backgroundBrown {
+    background-color: rgb(131, 43, 43);
+}
+.backgroundGrey {
+    background-color: grey;
+}

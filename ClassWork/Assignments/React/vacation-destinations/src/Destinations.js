@@ -1,0 +1,40 @@
+import React from 'react'
+import VacationSpot from './VacationSpot'
+
+const vacationSpots = [  
+  {
+    place: "Meridian, Idaho",
+    price: 40,
+    timeToGo: "Spring"
+  },{
+    place: "Cancun",
+    price: 900,
+    timeToGo: "Winter"
+  },{ 
+    place: "China",
+    price: 1200,
+    timeToGo: "Fall"
+  },{
+    place: "Russia",
+    price: 1100,
+    timeToGo: "Summer"
+  },{
+    place: "Lebanon",
+    price: 400,
+    timeToGo: "Spring"
+  }
+]
+
+const Destinations = () => {
+  return (
+    <div>
+      { vacationSpots.map(vacationSpots =>  
+        <VacationSpot 
+          place={vacationSpots.place}
+          price={vacationSpots.price}
+          timeToGo={vacationSpots.timeToGo}/>)}
+    </div>
+  )
+}
+
+export default Destinations
