@@ -1,4 +1,3 @@
-var color_td
 document.write("<h1 style='color: #008B8B'>Multiplication Table</h1>")
 document.write("<table>")
 for(var i = 1; i <= 12; i++) {

@@ -17,7 +17,7 @@ const VacationSpot = ( { place, price, timeToGo } ) => {
     let priceValue
     if(price < 500){
         priceValue = '$'
-    } else if (price < 1000){
+    } else if (price < 1000){ 
         priceValue = '$$'
     } else {  
         priceValue = '$$$'

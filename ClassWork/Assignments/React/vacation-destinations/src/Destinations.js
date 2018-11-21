@@ -13,7 +13,7 @@ const vacationSpots = [
   },{ 
     place: "China",
     price: 1200,
-    timeToGo: "Fall"
+    timeToGo: "Fall" 
   },{
     place: "Russia",
     price: 1100,
