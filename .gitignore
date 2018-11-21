@@ -1,6 +1,4 @@
-node_modules/
 .DS_Store
-
-000/
-0-notes/
-0-React/
+.vscode
+node_modules
+*.orig
