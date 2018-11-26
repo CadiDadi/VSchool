@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;    
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px auto;
+    /* border: 1px solid black; */
+    grid-gap: 10px;
+    width: 400px;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.controls{
+    display: flex;
+    flex-direction: row; 
+     flex-wrap: wrap; 
+     justify-content: center;
+}
+.controls button{
+    font-size: 18px;
+    border: 1px solid rgb(17, 226, 34);
+    margin: 3px;
+    padding: 5px;
+    width: 250px;
+}
