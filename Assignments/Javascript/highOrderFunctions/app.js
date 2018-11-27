@@ -4,7 +4,6 @@
 /// there are additional functions in here
 
 // assignments
-        // https://coursework.vschool.io/array-map-exercises/
         // https://coursework.vschool.io/array-filter-exercises/
         // https://coursework.vschool.io/array-reduce-exercises/
         // https://coursework.vschool.io/array-sort-exercises/
@@ -60,125 +59,6 @@
     //                     })
     // console.log(filteredArray)  // returns [2, 4, 6]
 
-
-///////// map exercises /////////////////////////
-// https://coursework.vschool.io/array-map-exercises/
-
-// Use the built-in .map() method on arrays to solve all of these problems
-
-//////done/////  1) Make an array of numbers that are doubles of the first array
-        // var arr = [1,2,3,4];
-        // var newarr = arr.map(function(item){
-        //     return item + 1;
-        // })
-        // console.log(newarr) // returns [ 2, 3, 4, 5 ]
-
-        // function doubleNumbers(arr){
-        //     var returnsTheDoubledNumbers = arr.map(function(item){
-        //         return item * 2;
-        //     })
-        //     console.log(returnsTheDoubledNumbers) // returns [4, 10, 200]
-        // }
-        // doubleNumbers([2, 5, 100]); 
-
-// 2) Take an array of numbers and make them strings
-        // function stringItUp(arr){
-        //     var stringified = arr.map(function(item){
-        //         return item.toString()
-        //     })
-        //     console.log(stringified) //returns ["2", "5", "100"]
-        // }
-        // stringItUp([2, 5, 100]); 
-
-// 3) Capitalize first letter of each of an array of names & turn rest into lower case
-        function capitalizeNames(arr){
-            var capitalized = arr.map(function(item){
-                return item.charAt(0).toUpperCase() + item.substr(1).toLowerCase()
-            })
-            console.log(capitalized) //returns ["John", "Jacob", "Jingleheimer", "Schmidt"]
-        }
-        capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]); 
-
-// 4) Make an array of strings of the names
-        function namesOnly(arr){
-            ///enter code here
-        }
-        namesOnly([
-            {
-                name: "Angelina Jolie",
-                age: 80
-            },
-            {
-                name: "Eric Jones",
-                age: 2
-            },
-            {
-                name: "Bob Ziroll",
-                age: 100
-            }
-        ]) 
-        // ["Angelina Jolie", "Eric Jones", "Bob Ziroll"]
-
-// 4. example
-        // var countries = {
-        //     China: 1371980000,
-        //     India: 1276860000,
-        //     Pakistan: 190860000
-        // };
-        // var countriesFiltered = Object.keys(countries).filter(function(key) {
-        //     return countries[key]
-        // })
-        // .map(function(key) {
-        //     return countries[key]
-        // });
-        // console.log(countriesFiltered)  // Returns: [321786000, 255461700, 204873000, 190860000]
-
-
-// 5) Make an array of strings of the names saying whether or not they can go to The Matrix
-
-        // function makeStrings(arr){
-
-        // }
-        // makeStrings([
-        //     {
-        //         name: "Angelina Jolie",
-        //         age: 80
-        //     },
-        //     {
-        //         name: "Eric Jones",
-        //         age: 2
-        //     },
-        //     {
-        //         name: "Bob Ziroll",
-        //         age: 100
-        //     }
-        // ]) 
-        // // ["Angelina Jolie can go to The Matrix", 
-        // // "Eric Jones is under age!!", 
-        // // "Bob Ziroll can go to The Matrix"]
-
-// 6) Make an array of the names in <h1>s, and the ages in <h2>s
-
-        // function readyToPutInTheDOM(arr){
-
-        // }
-        // readyToPutInTheDOM([
-        //     {
-        //         name: "Angelina Jolie",
-        //         age: 80
-        //     },
-        //     {
-        //         name: "Eric Jones",
-        //         age: 2
-        //     },
-        //     {
-        //         name: "Bob Ziroll",
-        //         age: 100
-        //     }
-        // ]) 
-        // // ["<h1>Angelina Jolie</h1><h2>80</h2>", 
-        // // "<h1>Eric Jones</h1><h2>2</h2>", 
-        // // "<h1>Bob Ziroll</h1><h2>100</h2>"]
 
 
 //////// array filters//////////////////////////
