@@ -69,5 +69,5 @@ const Friendslist = () => {
         </div>
     )
 }
-
+ 
 export default Friendslist

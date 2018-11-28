@@ -35,6 +35,6 @@ const Destinations = () => {
           timeToGo={vacationSpots.timeToGo}/>)}
     </div>
   )
-}
+} 
 
 export default Destinations
