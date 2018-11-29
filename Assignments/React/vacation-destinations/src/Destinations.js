@@ -23,7 +23,7 @@ const vacationSpots = [
     price: 400,
     timeToGo: "Spring"
   }
-]
+] 
 
 const Destinations = () => {
   return (
