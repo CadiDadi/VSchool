@@ -65,7 +65,7 @@ class Player{
                 this.status = "Big"
                 } else if(this.status === "Big"){
                 this.status = "Powered Up"
-                } else if(this.status === "Powered Up"){
+                } else {
                 this.hasStar = true
                 }
         }
@@ -73,7 +73,10 @@ class Player{
                 this.totalCoins++
         }
         print(){
-                console.log(`Name: ${this.name}\nTotal Coins: ${this.totalCoins}\nStatus: ${this.status}\nHas Star: ${this.hasStar}\n`)
+                console.log(`Name: ${this.name}\n
+                             Total Coins: ${this.totalCoins}\n
+                             Status: ${this.status}\n
+                             Has Star: ${this.hasStar}\n`)
         }
 }    
 const mario = new Player()
@@ -91,4 +94,4 @@ const value = Math.floor(Math.random() * 3)
         if(!mario.gameActive){
                 clearInterval(game)
         }
-}, 1000)
+}, 500)
