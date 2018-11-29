@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+    <div>   
+        1. Write code to add an H1 into the div <br/> 
+        2. Write code that would add an alert & console.log('Hello World') when a div is clicked<br/> <br/> <br/> 
+    </div>     
+    <button id='clicker'>click button for Alert & console.log</button>
+    <div id='addH1'></div>
+    <script>
+        document.getElementById('clicker').onclick = function(){
+        alert('hello')
+        console.log('hello')
+        }
+        document.getElementById('addH1').innerHTML = '<h1>This is an H1 added via JS</h1>'
+    </script>
+</body>
+</html>
