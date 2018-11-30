@@ -30,6 +30,17 @@ var enemy3 = new Enemy("Bear", 4)
 ////////////start log//////////////
 console.log("\nWelcome to BlackWood Jungle! \n")
 var userName = readline.question('What is your name? ')
+
+/**
+ * One of the cool things about using string templates is that it will obey whitespaces. You're fine using `\n` here, but you could also
+ * actually hit enter and put the text you want on the next line, and the string template will obey that whitespace.
+ * 
+ * Example:
+ * console.log(`
+ * Hi ${username}, enjoy your time here!
+ * But beware of the wild animals!!
+ * `)
+ */
 console.log(`\nHi ${userName}, enjoy your time here! \nBut beware of the wild animals!! `)
 while(!gameEnd){
     var action = readline.keyIn('\n1. Would you like to take a walk down the path? If so, press [w]. \n2. Feeling lucky punk? Fight one of our jungle animals. If you win, you earn some bling. To fight, press [f].\n3. If you are too scared, press [x] to leave now. \n4. To check your inventory of weapons, press [i]. \n5. To check your status, press [p]. \n\nEnter your option: ', {limit: ['w', 'x', 'i', 'f', 'p']})
@@ -61,6 +72,9 @@ function print(){
 function walk(){
     var walkRandom = (Math.floor(Math.random() * 8) + 1) //1,2,3 = get attack. 4,5,6 = attack. 0,7,8 = no encounter 
     // console.log(walkRandom)
+    /**
+     * Consider using a switch block here instead of a long string of else if blocks
+     */
     if(walkRandom === 1) {
         enemy1.hp -= player1.attack()
         console.log('\nYou attack Lion\n')
