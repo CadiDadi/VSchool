@@ -8,14 +8,14 @@ const Friend = (props) => {
             <h1>Name: {name}</h1>
             <h2>Age: {age}</h2>
             {pets.map(pets =>  
-            <Pet           
-                name={pets.name}
-                breed={pets.breed} />
+                <Pet           
+                    name={pets.name}
+                    breed={pets.breed} />
             )}
 
         </div>
     )
-}
+}  
   
 export default Friend
 

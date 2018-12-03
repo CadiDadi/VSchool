@@ -10,4 +10,3 @@ const Pet = ({ name, breed }) => {
 }
 
 export default Pet
-
