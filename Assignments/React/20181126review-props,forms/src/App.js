@@ -52,7 +52,7 @@ class App extends Component {
                             lightsaber={char.lightsaber}/>) 
                     }
                 </div>
-            </div>
+            </div> 
         )
     }
 }

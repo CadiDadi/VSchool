@@ -21,5 +21,5 @@ Character.propTypes = {
     lightsaber: PropTypes.string.isRequired
 }
 
-export default Character
+export default Character 
 

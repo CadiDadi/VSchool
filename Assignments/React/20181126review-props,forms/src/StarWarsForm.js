@@ -29,4 +29,4 @@ StarWarsForm.propTypes = {
     handleSubmit: PropTypes.func.isRequired
 }
  
-export default StarWarsForm
+export default StarWarsForm 

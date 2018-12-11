@@ -1,0 +1,29 @@
+.navbar {
+    /* viewport width = % of page(viewport) - 100% whole page, 50% half of page. NOTE: sometimes % or vw dont work as intended, may be used alternately */
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(201, 194, 194, 0.6);
+    color: rgb(22, 204, 228);
+}
+.home,
+.about,
+.services {
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.home {
+    background-color: aqua;
+}
+.about {
+    background-color: blue;
+}
+.services {
+    background-color: green;
+}
