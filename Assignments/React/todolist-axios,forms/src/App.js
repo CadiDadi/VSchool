@@ -9,7 +9,7 @@ class App extends Component {
         this.state={
             todos: [],
             title: '',
-            description: '',
+            description: '', 
             id: ''
         }
     } 

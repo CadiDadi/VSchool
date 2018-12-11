@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ToDoForm = props => {
+const ToDoForm = props => { 
     const { handleChange, handleSubmit, title } = props
     return(
         <form onSubmit={handleSubmit}>
@@ -15,5 +15,5 @@ const ToDoForm = props => {
         </form>
     )
 }
-
+ 
 export default ToDoForm

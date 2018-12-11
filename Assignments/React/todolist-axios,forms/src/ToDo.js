@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-class ToDo extends Component {
+class ToDo extends Component { 
     constructor(){
         super()
         this.state = {
