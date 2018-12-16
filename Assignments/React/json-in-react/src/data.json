@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "name": "Rick",
+            "age": 70,
+            "friends": ["Morty", "Birdman"],
+            "id": 58349020485
+        },
+        {
+            "name": "Morty",
+            "age": 13,
+            "friends": ["Rick", "Birdman"],
+            "id": 3735895693
+        },
+        {
+            "name": "Birdman",
+            "age": 39,
+            "friends": ["Morty", "Rick"],
+            "id": 485689393
+        }
+    ],
+    "otherData": [
+        { "color": "blue" }
+    ]
+}
