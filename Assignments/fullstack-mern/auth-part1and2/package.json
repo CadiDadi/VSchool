@@ -1,0 +1,23 @@
+{
+  "name": "auth-part1-server",
+  "version": "1.0.0",
+  "description": "// Not secure     - We refresh, user can get logged out     - user: {         username: \"myUsername\",         password: \"password\",     }     - User can access any page on our application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  }
+}

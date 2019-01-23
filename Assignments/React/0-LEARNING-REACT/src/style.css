@@ -1,0 +1,22 @@
+
+/* inline styling (in JS files) is possible, but .css files preferrable in most cases */
+
+.nav{
+    background-color: grey;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+#sam > img{
+    width:  300px;
+    height: 100px;
+}
+#scott > img{
+    width:  500px;
+    height: 300px;
+}
+.ContactCardDiv{
+    /* background-color: blueviolet; */
+    border-style: dotted;
+    padding: 5px;
+}
