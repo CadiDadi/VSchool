@@ -19,9 +19,6 @@ a:hover {
     text-transform: uppercase;
 }
 
-
-
-
 /* 
 classes
     in html:
@@ -51,5 +48,4 @@ traverse - select only one element withn a class or ID
         .container p {
             color: green;
         }
-
-    */
+*/
