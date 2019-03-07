@@ -1,4 +1,3 @@
-
 // 1. Make a function that takes a string and returns that string reversed
         //method 1
         let reverseStr = function(str) {

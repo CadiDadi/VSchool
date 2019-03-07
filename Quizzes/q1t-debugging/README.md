@@ -1,4 +1,3 @@
-# q1t  quiz
 
 ##scenario
 I am a manager at a hip company. 
