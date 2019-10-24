@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: lighter;
+  box-sizing: border-box;
+}
+header {
+  overflow: hidden;
+  background-color: blue;
+}
+header a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  border-right: 1px solid white;
+}
+header a:hover {
+  background-color: white;
+  color: blue;
+}
+header a.right {
+  float: right;
+  border-left: 1px solid white;
+}
+button{
+    background-color: gray;
+    color: white;
+    margin: 15px;
+    padding: 5px;
+    font-size: 18px;
+    min-width: 200px;
+}
+#ifElse{
+    background-color: green;
+    color: white;
+    margin: 15px;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    min-width: 450px;
+    max-width: 450px;
+}
+@media screen and (max-width: 600px) {
+  header a {
+    float: none;
+    border-bottom: 1px solid white;
+  }
+  header a.right{
+      float: none;
+      border-bottom: 1px solid blue;
+  }
+}
