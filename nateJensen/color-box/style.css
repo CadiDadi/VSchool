@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333;
+}
+
+#app-container h1 {
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: #eee;
+}
+
+#color-box {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    transition: background-color 300ms linear;
+    border-radius: 10px;
+}
+
+#app-container div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    background-color: #444;
+}
+
+#app-container div:nth-child(3) > button {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px;
+    font-size: 20px;
+    width: 200px;
+}
