@@ -119,11 +119,6 @@ margin & padding
     float: left;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
 /* responsive design 
 
 https://coursework.vschool.io/responsive-color-grid-from-scratch/ 
